@@ -18,17 +18,21 @@
 
 
 ```text
-Farmly-AI/
+FARMLY/
+├── app/                        # React Native / Expo Frontend
+│   ├── App.js                  # Main navigation container
+│   ├── assets/                 # UI assets, icons, and placeholder images
+│   ├── api/                    # API integration logic (aiService.js)
+│   └── screens/
+│       ├── Dashboard.js        # Weather and timely care alerts
+│       ├── CropLibrary.js      # Plant collection grid
+│       ├── ResultScreen.js     # AI diagnostic output and care instructions
+│       ├── HistoryScreen.js    # Care action timeline
+│       └── ProfileScreen.js    # User settings and multilingual support
 │
-├── backend/
-│   ├── app.py                 # FastAPI server and endpoint logic
-│   ├── model.py               # ML model loading and prediction logic
-│   ├── crop_disease_model.h5  # Pre-trained TensorFlow model
-│   └── requirements.txt       # Python dependencies
-│
-└── frontend/ (Expo App)
-    ├── App.js                 # Main React Native UI and logic
-    ├── imageUploader.js       # Dedicated component for image handling
-    ├── app.json               # Expo configuration
-    ├── package.json           # Node dependencies
+└── ai_engine/                  # PyTorch Machine Learning Pipeline
+    ├── train.py                # MobileNetV2 training script
+    ├── dataset/                # Training and validation image data
+    ├── farmly_disease_model.pth# Generated model weights
+    └── class_names.txt         # Auto-generated class mappingsendencies
     └── assets/                # Contains logo, icons, animations, flags, etc.
